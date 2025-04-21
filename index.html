@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Mi Perfil Personal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>¡Hola, les doy un saludo mi nombre es JESUS MANUEL FARFAN URIBE!</h1>
+
+        <div class="section">
+            <div class="perfil-container">
+                <img src="img/perfil.png" alt="Foto de perfil" class="foto-perfil">
+                <div class="info-texto">
+                    <p><strong>Edad:</strong> 19 años hasta el 20 de mayo </p>
+                    <p><strong>Comida favorita:</strong> Lomo de cerdo 🤤🤤</p>
+                    <p><strong>Color favorito:</strong> Azul</p>
+                    <p><strong>Pasatiempos:</strong> Jugar voleibol, jugar video juegos y escuchar musica </p>
+                    <p><strong>Intereses:</strong> Tecnología, viajar y aprender nuevas cosas</p>
+                </div>
+            </div>
+        </div>
+
+    <div class="section">
+        <h2>Datos Curiosos</h2>
+        <ul>
+            <li>¡Puedo resolver un cubo Rubik en menos de 1 dia 😎😎😎!</li>
+            <li>Soy capaz de sacarme la yuca del tobillo sin fin 🤣🤣.</li>
+            <li>Mis series facoritas son Peaky Blinders y la ley de los audaces (Suits).</li>
+        </ul>
+        <button onclick="likeSection('curiosities')">❤️</button>
+        <span class="like-count" id="curiosities">0</span>
+    </div>
+
+    <div class="section">
+        <h2>Mi Cita Favorita</h2>
+        <blockquote>"El dolor es la forma en que el mundo aprende. Solo entendiendo el verdadero sufrimiento, uno puede obtener verdadera paz." – pain 🔥 </blockquote>
+        <blockquote>"Un sueño solo es eso… un sueño. Pero si alguien lo hace realidad, deja de ser un sueño y se convierte en una meta." – orochimaru 🐍 </blockquote>
+        <blockquote>"Las personas viven atadas a lo que creen que es correcto. Eso los hace temer y rechazar todo lo que es diferente." – itachi 🍃 </blockquote>
+        <blockquote>"El conocimiento y la conciencia son vagas, y tal vez mejor llamadas ilusiones." – itachi 🍃 </blockquote>
+
+        <button onclick="likeSection('quote')">❤️</button>
+        <span class="like-count" id="quote">0</span>
+    </div>
+
+    <div class="section">
+        <h2>Mis Superpoderes Secretos</h2>
+        <ul>
+            <li>Memoria para recordar todos los puntos de localizacion que me dan.</li>
+            <li>Escuchar a mis amigos y dar buenos consejos</li>
+            <li>dormir en bus de pie (termine 10 cuadras despues de llegar a mi destino🤣🤣🤣)</li>
+            <li>tengo el Superpoder de la deficit de atencion e hiperactividad jejeje </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Que opinan -_- los estoy viendo</h2>
+        <textarea id="commentBox" placeholder="Opine animal..."></textarea>
+        <button onclick="addComment()">Enviar</button>
+        <div class="comments" id="commentsArea"></div>
+    </div>
+    
+    <div class="section">
+        <h2>Mis Fotos Favoritas 📸</h2>
+        <div class="gallery">
+            <img src="img/imagen1.png" alt="Foto 1" onclick="mostrarImagen(this.src)">
+            <img src="img/imagen2.png" alt="Foto 2" onclick="mostrarImagen(this.src)">
+            <img src="img/imagen3.png" alt="Foto 3" onclick="mostrarImagen(this.src)">
+            <img src="img/imagen4.png" alt="Foto 4" onclick="mostrarImagen(this.src)">
+            <img src="img/imagen5.png" alt="Foto 5" onclick="mostrarImagen(this.src)">
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <img class="modal-contenido" id="img-ampliada">
+    </div>
+
+    <div class="section">
+        <h2>🎯 ¿Qué tanto me conoces?</h2>
+        <p>Responde estas preguntas sobre mí:</p>
+    
+        <div id="quiz">
+        <p>1️⃣ ¿Cuál es mi color favorito?</p>
+        <select id="pregunta1">
+            <option value="">Selecciona una opción</option>
+            <option value="Rojo">Rojo</option>
+            <option value="Negro">Negro</option>
+            <option value="Azul">Azul</option>
+        </select>
+    
+        <p>2️⃣ ¿Cuál es mi comida favorita?</p>
+        <select id="pregunta2">
+            <option value="">Selecciona una opción</option>
+            <option value="Lentejas">Lentejas</option>
+            <option value="Lomo">Lomo de cerdo</option>
+            <option value="Pechuga">Pechuga asada</option>
+        </select>
+    
+        <p>3️⃣ ¿Qué Juego disfruto más?</p>
+        <select id="pregunta3">
+            <option value="">Selecciona una opción</option>
+            <option value="Jugar videojuegos">Jugar videojuegos</option>
+            <option value="Jugar voleibol">Jugar voleibol</option>
+            <option value="Jugar lol">Jugar lol</option>
+        </select>
+    
+        <br><br>
+        <button onclick="verificarRespuestas()">Enviar respuestas</button>
+        <p id="resultadoQuiz"></p>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
